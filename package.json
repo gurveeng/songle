@@ -1,0 +1,19 @@
+{
+  "name": "songle",
+  "version": "1.0.0",
+  "description": "song quiz game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gurveeng/songle.git"
+  },
+  "author": "Gurveen Gill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurveeng/songle/issues"
+  },
+  "homepage": "https://github.com/gurveeng/songle#readme"
+}
