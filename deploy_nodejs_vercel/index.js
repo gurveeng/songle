@@ -22,17 +22,10 @@ const server = http.createServer((req, res) => {
   // Set the response header
   res.writeHead(200, {'Content-Type': 'text/plain'});
   // Write some text to the response
-  res.end('Welcome to my simple Node.js app!');
+  res.redirect('../public/home.html');
 });
 
 app.use(cors(corsOptions));
-
-
-app.use(session({
-  secret: '6yyhtr6878v87tgvjkt8v7tguygv7',
-  resave: false,
-  saveUninitialized: false
-}));
 
 class Track {
   constructor(title, artist, previewUrl) {
