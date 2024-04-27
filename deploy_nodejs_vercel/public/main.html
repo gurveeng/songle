@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Songle</h1>
+    <h2 id="score">Score:0</h2>
+    <div class="audioContainer">
+        <audio id="audioPlayer" src="https://p.scdn.co/mp3-preview/aedafcac17f50ebd146ab90521d422ca973fcfa0?cid=438a6377672b4b89995262d15d4d39ec"></audio>
+        <div class="container">
+            <button id="playButton">
+                <img src="../img/white-play.png" alt="Play">
+            </button>
+        </div>
+    </div>
+    <div class="userInput">
+        <form autocomplete="off">
+            <input type="text" name="q" id="q" onKeyUp="showResults(this.value)" />
+            <button type="button" id="enterButton">Submit</button>
+            <div id="result"></div>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
