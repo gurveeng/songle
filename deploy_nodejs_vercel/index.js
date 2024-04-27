@@ -100,7 +100,7 @@ app.get('/callback', async (req, res) => {
     req.session.accessToken = accessToken;
 
 
-    res.redirect('http://127.0.0.1:8080/main.html');
+    res.redirect('/main.html');
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send(error.message);
