@@ -1,15 +1,91 @@
+body {
+    background-color: #035D44;
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10vh;
+    font-size: 40px;
+    color: #ECA9C7;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+h2 {
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    font-size: 24px; 
+    color: #ECA9C7;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.userInput {
+   text-align: center;
+}
+
+.userInput form {
+    display: inline-block; 
+    text-align: left;
+}
+
+#q {
+    border: 2px solid black; /* Set border to black */
+    background-color: transparent; /* Set background to transparent */
+    padding: 5px 0;
+    color: #ECA9C7;
+    width: 50vw;
+    outline: none; /* Remove default outline */
+}
+
 #result {
-    border: 1px dotted #ccc;
-    padding: 3px;
-  }
-  #result ul {
+    width:50vw;
+    border: 1px solid black; /* Set border to black */
+    background-color: transparent; /* Set background to transparent */
+}
+
+#result ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  #result ul li {
+}
+
+#result ul li {
     padding: 5px 0;
-  }
-  #result ul li:hover {
+    color: #ECA9C7; /* Set text color to pink */
+}
+
+#result ul li:hover {
     background: #eee;
-  }
+    cursor: pointer;
+}
+
+#enterButton{
+    color:white;
+    font: inherit;
+    color: 3A3D2E;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    text-align: center; /* Center align the content */
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+#playButton {
+    display: inline-block; /* Make the anchor element a block element */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#playButton:hover {
+    cursor: pointer;
+}
+
