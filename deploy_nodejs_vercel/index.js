@@ -6,7 +6,6 @@ const crypto = require('crypto');
 const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-import http from 'http';
 
 
 app.use(cors());
@@ -42,7 +41,7 @@ const generateRandomString = (length) => {
 };
 
 // Redirect URI and Spotify credentials
-const redirectUri = 'http://localhost:3000/callback';
+const redirectUri = 'https://songle.vercel.app/callback';
 const clientId = '438a6377672b4b89995262d15d4d39ec';
 const clientSecret = '6e8ee31f27fb429e80281903e235a8ad'; 
 
@@ -96,7 +95,7 @@ app.get('/callback', async (req, res) => {
     req.session.accessToken = accessToken;
 
 
-    res.redirect('/main.html');
+    res.redirect('https://songle.vercel.app/main.html');
   } catch (error) {
     console.error('Error:', error);
     res.status(500).send(error.message);
