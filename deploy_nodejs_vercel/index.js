@@ -13,10 +13,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'http://127.0.0.1:8080',
+  origin: '*',
   methods: 'GET,POST',
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 
