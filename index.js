@@ -7,6 +7,7 @@ const crypto = require('crypto');
 const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+import http from 'http';
 
 
 app.use(cors());
@@ -17,6 +18,13 @@ const corsOptions = {
   methods: 'GET,POST',
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
+
+const server = http.createServer((req, res) => {
+  // Set the response header
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  // Write some text to the response
+  res.end('Welcome to my simple Node.js app!');
+});
 
 app.use(cors(corsOptions));
 
