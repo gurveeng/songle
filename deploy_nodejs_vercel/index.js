@@ -18,12 +18,7 @@ const corsOptions = {
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
 
-const server = http.createServer((req, res) => {
-  // Set the response header
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  // Write some text to the response
-  res.redirect('../public/home.html');
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors(corsOptions));
 
