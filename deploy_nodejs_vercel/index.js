@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const fetch = require('node-fetch');
 const querystring = require('querystring');
 const crypto = require('crypto');
 const session = require('express-session');
