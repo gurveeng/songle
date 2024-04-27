@@ -1,7 +1,7 @@
 const loginButton = document.querySelector("#login");
 
 const redirectToLogin = () => {
-  window.location.href = 'https://songle.vercel.app/login';
+  window.location.href = '/api/login';
 };
 
 if (loginButton) {

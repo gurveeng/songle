@@ -48,7 +48,7 @@ const clientSecret = '6e8ee31f27fb429e80281903e235a8ad';
 
 
 // Route for initiating the authentication flow
-app.get('/login', (req, res) => {
+app.get('/api/login', (req, res) => {
   const state = generateRandomString(16);
   const scope = 'user-top-read user-read-recently-played streaming'; // Specify your desired scopes here
   console.log("reached endpoint");
