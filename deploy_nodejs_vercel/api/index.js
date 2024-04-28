@@ -7,6 +7,8 @@ const session = require('express-session');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+let accessToken = "";
+
 
 app.use(cors());
 // Add this middleware to set the CORS headers
@@ -24,9 +26,6 @@ const corsOptions = {
   methods: 'GET,POST',
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
-
-
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors(corsOptions));
 
@@ -100,8 +99,6 @@ app.get('/callback', async (req, res) => {
 
     const tokenData = await tokenResponse.json();
     accessToken = tokenData.access_token;
-    req.session.accessToken = accessToken;
-
 
     res.redirect('https://songle.vercel.app/main.html');
   } catch (error) {
