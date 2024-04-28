@@ -138,7 +138,7 @@ app.get('/sendTrackList', async (req,res) => {
 
 // fetch top tracks data 
 async function fetchTopTracks(token) {
-  const result = await fetch("https://api.spotify.com/v1/me/top/tracks?limit=50", {
+  const result = await fetch("https://api.spotify.com/v1/me/top/tracks?limit=10", {
       method: "GET", headers: { Authorization: `Bearer ${token}` }
   });
 
