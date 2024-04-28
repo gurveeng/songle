@@ -48,7 +48,7 @@ const generateRandomString = (length) => {
 };
 
 // Redirect URI and Spotify credentials
-const redirectUri = 'https://songle.vercel.app/callback';
+const redirectUri = 'https://songle.vercel.app/api/callback';
 const clientId = '438a6377672b4b89995262d15d4d39ec';
 const clientSecret = '6e8ee31f27fb429e80281903e235a8ad'; 
 
