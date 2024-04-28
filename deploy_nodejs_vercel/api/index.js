@@ -107,7 +107,7 @@ app.get('/api/callback', async (req, res) => {
   }
 });
 
-app.get('/sendTrackList', async (req,res) => {
+app.get('/api/sendTrackList', async (req,res) => {
   try {
     const toptracks = await fetchTopTracks(accessToken);
 
@@ -161,7 +161,7 @@ async function fetchSearchResults(searchInput) {
 
 
 // send search results
-app.post('/sendSearchResults', async (req, res) => {
+app.post('/api/sendSearchResults', async (req, res) => {
   try {
     const { searchInput } = req.body; // Destructure searchInput from req.body
     console.log(searchInput);
