@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: '*',
+  origin: 'https://songle-4x8y0qie8-gurveengs-projects.vercel.app/main.js',
   methods: 'GET,POST',
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
