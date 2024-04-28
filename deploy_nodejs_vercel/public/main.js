@@ -23,7 +23,7 @@ const shuffleArray = (array) => {
 const getTrackList = async () => {
   try {
     // Make a fetch request to the server's /sendTrackList endpoint
-    const response = await fetch('https://songle.vercel.app/sendTrackList');
+    const response = await fetch('/sendTrackList');
     
     if (!response.ok) {
       throw new Error('Failed to fetch track list');
@@ -41,7 +41,7 @@ const getTrackList = async () => {
 const fetchTrackList = async () => {
   try {
     // Make a fetch request to the server's /sendTrackList endpoint
-    const response = await fetch('https://songle.vercel.app/sendTrackList');
+    const response = await fetch('/sendTrackList');
     
     if (!response.ok) {
       throw new Error('Failed to fetch track list');
