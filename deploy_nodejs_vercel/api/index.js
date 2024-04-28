@@ -71,7 +71,7 @@ app.get('/api/login', (req, res) => {
 });
 
 // Route for handling the callback from Spotify
-app.get('/callback', async (req, res) => {
+app.get('/api/callback', async (req, res) => {
   const code = req.query.code || null;
 
   if (!code) {
