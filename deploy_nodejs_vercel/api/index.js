@@ -112,9 +112,9 @@ app.get('/sendTrackList', async (req,res) => {
     const toptracks = await fetchTopTracks(accessToken);
 
     // input toptracks title, artist, preview data into array of Tracks 
-    let trackList = new Array(50).fill(null);
+    let trackList = new Array(10).fill(null);
 
-    const trackListLength = 50;
+    const trackListLength = 10;
 
     let i = 0;
     while (i < trackListLength) {

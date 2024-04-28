@@ -3,7 +3,7 @@ const audio = document.querySelector("#audioPlayer")
 let duration = 2;
 
 // game variables
-let trackList = new Array(50).fill(null);
+let trackList = new Array(10).fill(null);
 let score = 0;
 let lost = false;
 class searchResult {
