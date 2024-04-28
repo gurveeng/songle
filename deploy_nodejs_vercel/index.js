@@ -9,10 +9,18 @@ const bodyParser = require('body-parser');
 
 
 app.use(cors());
+// Add this middleware to set the CORS headers
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*'); // You can set specific origin instead of '*'
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'https://songle-4x8y0qie8-gurveengs-projects.vercel.app/main.js',
+  origin: '*',
   methods: 'GET,POST',
   optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
