@@ -12,7 +12,7 @@ Create a Spotify Developer App:
 
 1. Go to Spotify for Developers.
 2. Create a new app and retrieve your Client ID and Client Secret.
-3. Set the Redirect URI to https://songle.vercel.app/api/callback.
+3. Set the Redirect URI to http://localhost:3000/api/callback.
 
 Set Up the Project:
 
