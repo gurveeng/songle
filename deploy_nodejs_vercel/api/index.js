@@ -9,11 +9,16 @@ const bodyParser = require('body-parser');
 
 let accessToken = "";
 
+// Redirect URI and Spotify credentials
+const redirectUri = 'https://songle.vercel.app/api/callback';
+const clientId = '';
+const clientSecret = ''; 
+
 
 app.use(cors());
-// Add this middleware to set the CORS headers
+
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*'); // You can set specific origin instead of '*'
+  res.setHeader('Access-Control-Allow-Origin', '*'); 
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
@@ -24,7 +29,7 @@ app.use(bodyParser.json());
 const corsOptions = {
   origin: '*',
   methods: 'GET,POST',
-  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+  optionsSuccessStatus: 200 
 };
 
 app.use(cors(corsOptions));
@@ -38,7 +43,7 @@ class Track {
 }
 
 
-// Function to generate a random string
+
 const generateRandomString = (length) => {
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const values = crypto.randomBytes(length);
@@ -47,17 +52,14 @@ const generateRandomString = (length) => {
     .join('');
 };
 
-// Redirect URI and Spotify credentials
-const redirectUri = 'https://songle.vercel.app/api/callback';
-const clientId = '438a6377672b4b89995262d15d4d39ec';
-const clientSecret = '6e8ee31f27fb429e80281903e235a8ad'; 
 
 
 
-// Route for initiating the authentication flow
+
+
 app.get('/api/login', (req, res) => {
   const state = generateRandomString(16);
-  const scope = 'user-top-read user-read-recently-played streaming'; // Specify your desired scopes here
+  const scope = 'user-top-read user-read-recently-played streaming'; 
   console.log("reached endpoint");
 
   res.redirect('https://accounts.spotify.com/authorize?' +
@@ -70,7 +72,7 @@ app.get('/api/login', (req, res) => {
     }));
 });
 
-// Route for handling the callback from Spotify
+
 app.get('/api/callback', async (req, res) => {
   const code = req.query.code || null;
 
@@ -163,11 +165,11 @@ async function fetchSearchResults(searchInput) {
 // send search results
 app.post('/api/sendSearchResults', async (req, res) => {
   try {
-    const { searchInput } = req.body; // Destructure searchInput from req.body
+    const { searchInput } = req.body; 
     console.log(searchInput);
     const searchResults = await fetchSearchResults(searchInput);
 
-    // Send the search results as JSON
+
     res.json({ searchResults });
   } catch (error) {
     console.error('Error:', error);
