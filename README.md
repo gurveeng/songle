@@ -4,7 +4,7 @@ Songle is a music quiz game that challenges you to identify your top Spotify tra
 
 Due to Spotify's developer limitations, this app is currently not accessible to others. Spotify has not extended the necessary API access beyond my account, so you won't be able to use it directly.
 
-While the app isn't publicly available, you can still check out a demo of the interface here.
+While the app isn't publicly available, you can still check out a demo of the interface [here](https://youtu.be/CcKVk4x3zgg).
 
 If you'd like to experience Songle yourself, follow these steps:
 
